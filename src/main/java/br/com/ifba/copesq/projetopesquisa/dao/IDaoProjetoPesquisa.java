@@ -6,7 +6,7 @@
 package br.com.ifba.copesq.projetopesquisa.dao;
 
 import br.com.ifba.copesq.projetopesquisa.model.ProjetoPesquisa;
-import br.com.ifba.sava.infrastructure.dao.IBaseDao;
+import br.com.ifba.copesq.infrastructure.dao.IBaseDao;
 
 /**
  *

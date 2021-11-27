@@ -111,7 +111,7 @@ public class CadastrarProjetoPesquisa extends javax.swing.JFrame {
         projetoPesquisa.setPalavrasChaves(txtPalavrasChaves.getText());
         projetoPesquisa.setReferenciasBibliograficas(txtReferencias.getText());
         
-        FacadeInstance.getInstance();
+        FacadeInstance.getInstance().saveProjetoPesquisa(projetoPesquisa);
         
     }//GEN-LAST:event_btnSalvarActionPerformed
 
