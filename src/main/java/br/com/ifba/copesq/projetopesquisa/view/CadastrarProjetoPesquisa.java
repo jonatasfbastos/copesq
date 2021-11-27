@@ -30,16 +30,32 @@ public class CadastrarProjetoPesquisa extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblNome = new javax.swing.JLabel();
-        txtNome = new javax.swing.JTextField();
+        lblAreaConhecimento = new javax.swing.JLabel();
+        txtAreaConhecimento = new javax.swing.JTextField();
         btnSalvar = new javax.swing.JButton();
+        lblTitulo = new javax.swing.JLabel();
+        txtTitulo = new javax.swing.JTextField();
+        lblJustificativa = new javax.swing.JLabel();
+        txtJustificativa = new javax.swing.JTextField();
+        lblResumo = new javax.swing.JLabel();
+        txtResumo = new javax.swing.JTextField();
+        lblObjetivoGeral = new javax.swing.JLabel();
+        txtObjetivoGeral = new javax.swing.JTextField();
+        lblMetodologia = new javax.swing.JLabel();
+        txtMetodologia = new javax.swing.JTextField();
+        lblFundamentacao = new javax.swing.JLabel();
+        txtFundamentacao = new javax.swing.JTextField();
+        lblPalavrasChaves = new javax.swing.JLabel();
+        txtPalavrasChaves = new javax.swing.JTextField();
+        txtReferencias = new javax.swing.JTextField();
+        lblReferencias = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblNome.setText("Nome:");
-        getContentPane().add(lblNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 95, -1, -1));
-        getContentPane().add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 140, -1));
+        lblAreaConhecimento.setText("Área do Conhecimento:");
+        getContentPane().add(lblAreaConhecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, -1, -1));
+        getContentPane().add(txtAreaConhecimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 260, -1));
 
         btnSalvar.setText("Salvar");
         btnSalvar.addActionListener(new java.awt.event.ActionListener() {
@@ -47,16 +63,53 @@ public class CadastrarProjetoPesquisa extends javax.swing.JFrame {
                 btnSalvarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, -1, -1));
+        getContentPane().add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 440, 90, 40));
+
+        lblTitulo.setText("Título:");
+        getContentPane().add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, -1, -1));
+        getContentPane().add(txtTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, 260, -1));
+
+        lblJustificativa.setText("Justificativa:");
+        getContentPane().add(lblJustificativa, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 90, -1));
+        getContentPane().add(txtJustificativa, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 260, -1));
+
+        lblResumo.setText("Resumo:");
+        getContentPane().add(lblResumo, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 180, -1, -1));
+        getContentPane().add(txtResumo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 260, -1));
+
+        lblObjetivoGeral.setText("Objetivo Geral:");
+        getContentPane().add(lblObjetivoGeral, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, -1, -1));
+        getContentPane().add(txtObjetivoGeral, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 260, -1));
+
+        lblMetodologia.setText("Metodologia da execução do projeto:");
+        getContentPane().add(lblMetodologia, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 260, -1, -1));
+        getContentPane().add(txtMetodologia, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 260, -1));
+
+        lblFundamentacao.setText("Fundamentação teórica:");
+        getContentPane().add(lblFundamentacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, -1, -1));
+        getContentPane().add(txtFundamentacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 260, -1));
+
+        lblPalavrasChaves.setText("Palavras-Chaves:");
+        getContentPane().add(lblPalavrasChaves, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, -1, -1));
+        getContentPane().add(txtPalavrasChaves, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 330, 260, -1));
+        getContentPane().add(txtReferencias, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 370, 260, -1));
+
+        lblReferencias.setText("Referências bibliográficas:");
+        getContentPane().add(lblReferencias, new org.netbeans.lib.awtextra.AbsoluteConstraints(106, 380, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-        // TODO add your handling code here:
-        
         ProjetoPesquisa projetoPesquisa = new ProjetoPesquisa();        
-        projetoPesquisa.setNome(txtNome.getText());
+        projetoPesquisa.setTitulo(txtTitulo.getText());
+        projetoPesquisa.setAreaConhecimento(txtAreaConhecimento.getText());
+        projetoPesquisa.setJustificativa(txtJustificativa.getText());
+        projetoPesquisa.setResumo(txtResumo.getText());
+        projetoPesquisa.setMetodologia(txtMetodologia.getText());
+        projetoPesquisa.setFundamentacaoTeorica(txtFundamentacao.getText());
+        projetoPesquisa.setPalavrasChaves(txtPalavrasChaves.getText());
+        projetoPesquisa.setReferenciasBibliograficas(txtReferencias.getText());
         
         FacadeInstance.getInstance();
         
@@ -99,7 +152,23 @@ public class CadastrarProjetoPesquisa extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSalvar;
-    private javax.swing.JLabel lblNome;
-    private javax.swing.JTextField txtNome;
+    private javax.swing.JLabel lblAreaConhecimento;
+    private javax.swing.JLabel lblFundamentacao;
+    private javax.swing.JLabel lblJustificativa;
+    private javax.swing.JLabel lblMetodologia;
+    private javax.swing.JLabel lblObjetivoGeral;
+    private javax.swing.JLabel lblPalavrasChaves;
+    private javax.swing.JLabel lblReferencias;
+    private javax.swing.JLabel lblResumo;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JTextField txtAreaConhecimento;
+    private javax.swing.JTextField txtFundamentacao;
+    private javax.swing.JTextField txtJustificativa;
+    private javax.swing.JTextField txtMetodologia;
+    private javax.swing.JTextField txtObjetivoGeral;
+    private javax.swing.JTextField txtPalavrasChaves;
+    private javax.swing.JTextField txtReferencias;
+    private javax.swing.JTextField txtResumo;
+    private javax.swing.JTextField txtTitulo;
     // End of variables declaration//GEN-END:variables
 }

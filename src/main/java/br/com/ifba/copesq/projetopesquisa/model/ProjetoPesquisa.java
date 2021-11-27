@@ -15,16 +15,85 @@ import javax.persistence.Entity;
  */
 @Entity
 public class ProjetoPesquisa extends PersistenceEntity implements Serializable{
-    
-    private String nome;
+    private String titulo;
+    private String areaConhecimento;
+    private String justificativa;
+    private String resumo;
+    private String objetivoGeral;
+    private String metodologia;
+    private String fundamentacaoTeorica;
+    private String palavrasChaves;
+    private String referenciasBibliograficas;
 
-    public String getNome() {
-        return nome;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
-    
-    
+
+    public String getAreaConhecimento() {
+        return areaConhecimento;
+    }
+
+    public void setAreaConhecimento(String areaConhecimento) {
+        this.areaConhecimento = areaConhecimento;
+    }
+
+    public String getJustificativa() {
+        return justificativa;
+    }
+
+    public void setJustificativa(String justificativa) {
+        this.justificativa = justificativa;
+    }
+
+    public String getResumo() {
+        return resumo;
+    }
+
+    public void setResumo(String resumo) {
+        this.resumo = resumo;
+    }
+
+    public String getObjetivoGeral() {
+        return objetivoGeral;
+    }
+
+    public void setObjetivoGeral(String objetivoGeral) {
+        this.objetivoGeral = objetivoGeral;
+    }
+
+    public String getMetodologia() {
+        return metodologia;
+    }
+
+    public void setMetodologia(String metodologia) {
+        this.metodologia = metodologia;
+    }
+
+    public String getFundamentacaoTeorica() {
+        return fundamentacaoTeorica;
+    }
+
+    public void setFundamentacaoTeorica(String fundamentacaoTeorica) {
+        this.fundamentacaoTeorica = fundamentacaoTeorica;
+    }
+
+    public String getPalavrasChaves() {
+        return palavrasChaves;
+    }
+
+    public void setPalavrasChaves(String palavrasChaves) {
+        this.palavrasChaves = palavrasChaves;
+    }
+
+    public String getReferenciasBibliograficas() {
+        return referenciasBibliograficas;
+    }
+
+    public void setReferenciasBibliograficas(String referenciasBibliograficas) {
+        this.referenciasBibliograficas = referenciasBibliograficas;
+    }
 }

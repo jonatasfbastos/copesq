@@ -5,6 +5,8 @@
  */
 package br.com.ifba.copesq.projetopesquisa.service;
 
+import br.com.ifba.copesq.projetopesquisa.dao.DaoProjetoPesquisa;
+import br.com.ifba.copesq.projetopesquisa.dao.IDaoProjetoPesquisa;
 import br.com.ifba.copesq.projetopesquisa.model.ProjetoPesquisa;
 
 /**
@@ -13,9 +15,11 @@ import br.com.ifba.copesq.projetopesquisa.model.ProjetoPesquisa;
  */
 public class ServiceProjetoPesquisa implements IServiceProjetoPesquisa{
     
-    
+    private final IDaoProjetoPesquisa daoProjetoPesquisa = new DaoProjetoPesquisa();
+
+
     public void saveProjetoPesquisa(ProjetoPesquisa projetoPesquisa){
-        
-       
+        // TODO: Fazer validação dos campos e lançar alguma exceção caso a validação não passe
+        daoProjetoPesquisa.save(projetoPesquisa);  
     }
 }

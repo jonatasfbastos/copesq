@@ -13,5 +13,4 @@ import br.com.ifba.sava.infrastructure.dao.BaseDao;
  * @author jonatasfbastos
  */
 public class DaoProjetoPesquisa extends BaseDao<ProjetoPesquisa> implements IDaoProjetoPesquisa{
-    
 }
