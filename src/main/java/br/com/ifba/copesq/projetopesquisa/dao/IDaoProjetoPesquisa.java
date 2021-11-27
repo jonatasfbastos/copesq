@@ -5,10 +5,15 @@
  */
 package br.com.ifba.copesq.projetopesquisa.dao;
 
+import br.com.ifba.copesq.projetopesquisa.model.ProjetoPesquisa;
+import br.com.ifba.sava.infrastructure.dao.IBaseDao;
+
 /**
  *
  * @author jonatasfbastos
  */
-public interface IDaoProjetoPesquisa {
-    
+public interface IDaoProjetoPesquisa extends IBaseDao<ProjetoPesquisa>{
+
+    @Override
+    public abstract ProjetoPesquisa save(ProjetoPesquisa projeto);
 }
