@@ -106,6 +106,7 @@ public class CadastrarProjetoPesquisa extends javax.swing.JFrame {
         projetoPesquisa.setAreaConhecimento(txtAreaConhecimento.getText());
         projetoPesquisa.setJustificativa(txtJustificativa.getText());
         projetoPesquisa.setResumo(txtResumo.getText());
+        projetoPesquisa.setObjetivoGeral(txtObjetivoGeral.getText());
         projetoPesquisa.setMetodologia(txtMetodologia.getText());
         projetoPesquisa.setFundamentacaoTeorica(txtFundamentacao.getText());
         projetoPesquisa.setPalavrasChaves(txtPalavrasChaves.getText());
