@@ -3,22 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.ifba.copesq.projetopesquisa.view;
+package br.com.ifba.copesq.usuario.view;
 
 import br.com.ifba.copesq.infrastructure.service.FacadeInstance;
-import br.com.ifba.copesq.projetopesquisa.model.ProjetoPesquisa;
-import javax.swing.JOptionPane;
+import br.com.ifba.copesq.usuario.model.Usuario;
 
 /**
  *
  * @author jaine
  */
-public class FormUsuario extends javax.swing.JFrame {
+public class FormCadastrarUsuario extends javax.swing.JFrame {
 
     /**
      * Creates new form NewJFrame
      */
-    public FormUsuario() {
+    public FormCadastrarUsuario() {
         initComponents();
     }
 
@@ -44,7 +43,6 @@ public class FormUsuario extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnSair = new javax.swing.JButton();
         btnCadastrar = new javax.swing.JButton();
-        btnVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -181,8 +179,6 @@ public class FormUsuario extends javax.swing.JFrame {
             }
         });
 
-        btnVoltar.setText("Voltar");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -190,8 +186,6 @@ public class FormUsuario extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnCadastrar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -206,8 +200,7 @@ public class FormUsuario extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSair)
-                    .addComponent(btnCadastrar)
-                    .addComponent(btnVoltar)))
+                    .addComponent(btnCadastrar)))
         );
 
         pack();
@@ -226,8 +219,13 @@ public class FormUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNomeActionPerformed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-        JOptionPane.showMessageDialog(null, "Nome: "+txtNome.getText()+"\nlogin: "+txtLogin.getText()+" "
-            + "\nsenha: "+jPasswordSenha.getText()+"\nDigite ok para cadastrar".toString()) ;        
+        Usuario usuario = new Usuario();
+
+        usuario.setNome(txtNome.getText());
+        usuario.setLogin(txtLogin.getText());
+        usuario.setSenha(lblSenha.getText());
+
+        FacadeInstance.getInstance().saveUsuario(usuario);
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void jPasswordRepetirSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordRepetirSenhaActionPerformed
@@ -235,7 +233,7 @@ public class FormUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordRepetirSenhaActionPerformed
 
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
-         System.exit(0);//sair da tela
+        System.exit(0);//sair da tela
     }//GEN-LAST:event_btnSairActionPerformed
 
     /**
@@ -255,14 +253,22 @@ public class FormUsuario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FormUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormCadastrarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FormUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormCadastrarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FormUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormCadastrarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FormUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormCadastrarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -274,8 +280,9 @@ public class FormUsuario extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
-                new FormUsuario().setVisible(true);
+                new FormCadastrarUsuario().setVisible(true);
             }
         });
     }
@@ -283,7 +290,6 @@ public class FormUsuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnSair;
-    private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordRepetirSenha;
